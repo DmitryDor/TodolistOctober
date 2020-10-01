@@ -27,6 +27,14 @@ function App() {
         let task = {id: v1(), title: title, isDone: true}
         setTasks([task, ...tasks])
     }
+    const changeStatus = (taskId: string, value: boolean) => {
+        let statyCope = [...tasks]
+        let task = statyCope.find(t=> t.id ===taskId)
+        if(task){
+            task.isDone = value
+        }
+        setTasks(statyCope)
+    }
 
     let tasksForTodolist = tasks
     if(filter === 'active'){
@@ -46,6 +54,8 @@ function App() {
                 removeTask={removeTask}
                 filteredTasks={filteredTasks}
                 addTask={addTask}
+                changeStatus={changeStatus}
+                filter={filter}
             />
         </div>
     );
