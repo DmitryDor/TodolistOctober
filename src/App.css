@@ -7,10 +7,10 @@
   margin-right: 50px;
 }
 
-.error{
-  border: red 1px solid;
-}
 
+.error{
+  border: 1px solid red;
+}
 .error-message{
   color: red;
 }
@@ -19,6 +19,6 @@
   background-color: aqua;
 }
 
-.is-done{
-  opacity: 0.5;
+.isDone{
+  opacity: 0.4;
 }
