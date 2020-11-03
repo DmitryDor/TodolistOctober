@@ -1,14 +1,14 @@
-.App {
+/*.App {
   padding: 30px;
   display: flex;
 }
 
 .App > div {
   margin-right: 50px;
-}
+}*/
 
 
-.error{
+/*.error{
   border: 1px solid red;
 }
 .error-message{
@@ -17,7 +17,7 @@
 
 .active-filter{
   background-color: aqua;
-}
+}*/
 
 .isDone{
   opacity: 0.4;
