@@ -49,12 +49,16 @@ export const todolistsReducer = (state: Array<TodolistType> = initialState, acti
             return stateCopy
         }
         case "CHANGE-TODOLIST-FILTER": {
-            const stateCopy = [...state]
-            const changeTitle = stateCopy.find(tl => tl.id === action.id)
+            const deepCopy = state.map( el => ({...el}))
+
+            const changeTitle = deepCopy.find(tl => tl.id === action.id)
+
             if (changeTitle) {
                 changeTitle.filter = action.filter
             }
-            return stateCopy
+
+         return deepCopy
+
         }
         default:
             return state
